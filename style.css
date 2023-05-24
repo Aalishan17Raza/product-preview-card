@@ -1,0 +1,134 @@
+:root {
+    --Cream: hsl(30, 38%, 92%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container {
+    width: 520px;
+    height: 380px;
+    background-color: var(--White);
+    border-radius: 10px;
+    display: flex;
+}
+
+img {
+    width: 55%;
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rightContainer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attribution {
+    position: fixed;
+    font-size: 11px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.title {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+button {
+    border: none;
+    background-color: var(--Dark-cyan);
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--White);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: hsl(158, 37%, 29%);
+    cursor: pointer;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.pricing {
+    display: flex;
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 376px) {
+    .Container {
+        display: flex;
+        flex-direction: column;
+        width: 92vw;
+        height: 90vh;
+    }
+
+    img {
+        width: 100%;
+        height: 40%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .rightContainer {
+        height: 100%;
+    }
+
+    .pricing{
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .bigPrice{
+        margin-right: 15px;
+    }
+
+    .title{
+        font-size: 1.9rem;
+    }
+    p{
+        font-size: 16px;
+    }
+}
